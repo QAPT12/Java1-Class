@@ -11,7 +11,7 @@
  * </pre></p>
  */
 
-package ca.nl.cna.quintin.java1.Assignment1.InClassAssignment3;
+package ca.nl.cna.quintin.java1.InClassAssignments.Assign3;
 
 import java.util.Scanner;
 

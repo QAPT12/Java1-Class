@@ -1,4 +1,6 @@
-package ca.nl.cna.quintin.java1.Assignment1.InClassExamples;
+package ca.nl.cna.quintin.java1.InClassAssignments.Assign2;
+
+import ca.nl.cna.quintin.java1.InClassAssignments.Assign2.Employee;
 
 import java.util.Scanner;
 
