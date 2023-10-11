@@ -1,4 +1,4 @@
 # Java1-Class
 
-project for first java class \n
+project for first java class \
 in class examples and assignments
