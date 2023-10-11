@@ -11,24 +11,18 @@
  * </pre></p>
  */
 
-package cna.nl.ca.quintin.java1.Assignment1.InClassAssignment3;
+package ca.nl.cna.quintin.java1.Assignment1.InClassAssignment3;
 
-import java.util.Scanner;
-
-public class FibSomethingPatternB {
+public class FibSomethingPatternA {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-
         System.out.println("Fun With Fib Something!");
-        System.out.println("Enter the number you want to reach (or closest in pattern): ");
-        int userNum = input.nextInt();
 
         int firstNum;
         int secondNum = 1;
 
-        for(int i = 0; i <= userNum; i = firstNum) {
+        for(int i = 0; i <= 13; i = firstNum) {
             System.out.printf("%d ", i);
             firstNum = secondNum;
             secondNum += i;
@@ -37,3 +31,5 @@ public class FibSomethingPatternB {
     }
 
 }
+
+

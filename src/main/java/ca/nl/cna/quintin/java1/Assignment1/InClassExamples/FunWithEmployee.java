@@ -1,4 +1,4 @@
-package cna.nl.ca.quintin.java1.Assignment1.InClassExamples;
+package ca.nl.cna.quintin.java1.Assignment1.InClassExamples;
 
 import java.util.Scanner;
 

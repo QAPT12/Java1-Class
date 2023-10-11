@@ -8,7 +8,7 @@
  * </pre></p>
  */
 
-package cna.nl.ca.quintin.java1.Assignment1.InClassAssignment3;
+package ca.nl.cna.quintin.java1.Assignment1.InClassAssignment3;
 
 public class SimpleNumberPattern {
 
