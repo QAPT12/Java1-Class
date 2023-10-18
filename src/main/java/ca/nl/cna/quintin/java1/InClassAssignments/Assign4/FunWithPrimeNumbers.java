@@ -2,6 +2,7 @@ package ca.nl.cna.quintin.java1.InClassAssignments.Assign4;
 
 import java.util.Scanner;
 
+import static ca.nl.cna.quintin.java1.InClassAssignments.Assign4.PrimeNumberCalculator.getUniquePrimeFactorization;
 import static ca.nl.cna.quintin.java1.InClassAssignments.Assign4.PrimeNumberCalculator.isPrime;
 
 public class FunWithPrimeNumbers {
@@ -38,7 +39,7 @@ public class FunWithPrimeNumbers {
             System.out.print("Enter first number: ");
             int startNum = input.nextInt();
 
-            System.out.println("Enter second number: ");
+            System.out.print("Enter second number: ");
             int endNum = input.nextInt();
 
             for (int i = startNum; i <= endNum; i++) {
@@ -48,13 +49,24 @@ public class FunWithPrimeNumbers {
             }
         } else if (userChoice == 3) {
 
-        }
-//        else if (userChoice == 4) {
-//
-//        } else {
-//
-//        }
+            System.out.print("Enter number: ");
+            int userNum = input.nextInt();
 
+            getUniquePrimeFactorization(userNum);
+
+        } else if (userChoice == 4) {
+
+            System.out.print("Enter limit: ");
+            int userLimit = input.nextInt();
+
+            for (int i = 1; i <= userLimit; i++) {
+                System.out.printf("\n the prime factorization of %d is: ", i);
+                getUniquePrimeFactorization(i);
+            }
+
+        } else {
+            System.out.println("Invalid option.");
+        }
 
     }
 }

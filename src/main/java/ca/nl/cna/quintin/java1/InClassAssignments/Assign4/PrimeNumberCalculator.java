@@ -50,9 +50,17 @@ public class PrimeNumberCalculator {
         return true;
     }
 
-//    public static String getUniquePrimeFactorization(int num) {
-//
-//    }
+    public static void getUniquePrimeFactorization(int n) {
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i)) {
+                int currentNum = n;
+                while (currentNum % i == 0) {
+                    System.out.print(i + " ");
+                    currentNum = currentNum / i;
+                }
+            }
+        }
+    }
 
 
 }
