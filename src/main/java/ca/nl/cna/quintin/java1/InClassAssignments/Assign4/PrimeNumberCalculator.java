@@ -50,16 +50,21 @@ public class PrimeNumberCalculator {
         return true;
     }
 
-    public static void getUniquePrimeFactorization(int n) {
+    public static String getUniquePrimeFactorization(int n) {
+        String factorizationString = "";
+
         for (int i = 2; i <= n; i++) {
+
             if (isPrime(i)) {
                 int currentNum = n;
                 while (currentNum % i == 0) {
-                    System.out.print(i + " ");
-                    currentNum = currentNum / i;
+                    factorizationString += i + " ";
+                    currentNum /= i;
                 }
+
             }
         }
+        return factorizationString;
     }
 
 

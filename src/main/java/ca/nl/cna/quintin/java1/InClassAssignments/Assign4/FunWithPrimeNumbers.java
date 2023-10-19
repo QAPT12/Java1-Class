@@ -11,7 +11,7 @@ public class FunWithPrimeNumbers {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("'Fun' with Prime Numbers!");
+        System.out.println("Fun with Prime Numbers!");
         System.out.println("""
                 1. Print all primes between 1 and a number.
                 2. Print all primes between two numbers.
@@ -52,7 +52,7 @@ public class FunWithPrimeNumbers {
             System.out.print("Enter number: ");
             int userNum = input.nextInt();
 
-            getUniquePrimeFactorization(userNum);
+            System.out.println(getUniquePrimeFactorization(userNum));
 
         } else if (userChoice == 4) {
 
@@ -60,8 +60,8 @@ public class FunWithPrimeNumbers {
             int userLimit = input.nextInt();
 
             for (int i = 1; i <= userLimit; i++) {
-                System.out.printf("\n the prime factorization of %d is: ", i);
-                getUniquePrimeFactorization(i);
+                System.out.printf("\n the prime factorization of %d is: %s", i, getUniquePrimeFactorization(i));
+
             }
 
         } else {
