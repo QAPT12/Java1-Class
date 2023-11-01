@@ -59,8 +59,6 @@ public class InvoiceItem {
      * @return total price for the invoice line item. Quantity * price of product.
      */
     public double getItemTotal() {
-        double price = this.product.getPrice();
-        int quantity = this.quantity;
-        return(price * quantity);
+        return(this.quantity * this.product.getPrice());
     }
 }

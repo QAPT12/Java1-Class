@@ -64,7 +64,6 @@ public class InvoiceTester {
         // get the total price for all the InvoiceItems on the invoice
         System.out.printf("\nInvoice total: %.2f", invoice.getInvoiceTotal());
 
-
     }
 
 }
