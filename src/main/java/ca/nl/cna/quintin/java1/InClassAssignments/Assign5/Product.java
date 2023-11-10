@@ -13,12 +13,12 @@ public class Product {
 
     /**
      * Constructor for the product. Takes a product id, description of product, and price.
-     * @param id id for product
-     * @param description product description
+     * @param id id for product. Takes highest value between the given value and 0 to not allow negatives.
+     * @param description product description.
      * @param price price of product. Takes the highest value between the given value and 0 to not allow negatives.
      */
     public Product(int id, String description, double price) {
-        this.id = id;
+        this.id = Math.max(id, 0);
         this.description = description;
         this.price = Math.max(price, 0);
     }
@@ -33,8 +33,7 @@ public class Product {
 
     /**
      * Set product id.
-     * @param id product id. Must be greater than zero. if ont id does not change.
-     *
+     * @param id product id. Must be greater than zero. if not id does not change.
      */
     public void setId(int id) {
         if(id >= 0) {
@@ -52,7 +51,7 @@ public class Product {
 
     /**
      * Set description.
-     * @param description products description.
+     * @param description product's description.
      */
     public void setDescription(String description) {
         this.description = description;

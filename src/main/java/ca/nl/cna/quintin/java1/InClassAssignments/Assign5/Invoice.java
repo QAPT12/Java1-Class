@@ -1,7 +1,7 @@
 package ca.nl.cna.quintin.java1.InClassAssignments.Assign5;
 
 /**
- * Class representing a simple invoice system
+ * Class representing a simple invoice system.
  *
  * @author quintin.tuck
  */
@@ -12,23 +12,23 @@ public class Invoice {
 
     /**
      * Get invoice line items array.
-     * @return invoice line items array. An array containing all line items of type InvoiceItem contained on the invoice.
+     * @return Invoice line items array. An array containing all line items of type InvoiceItem contained on the invoice.
      */
     public InvoiceItem[] getInvoiceLineItemsArray() {
         return invoiceLineItemsArray;
     }
 
     /**
-     * Get line items counter
-     * @return line items counter. The count of how many line items are on the invoice.
+     * Get line items counter.
+     * @return Line items counter. The count of how many line items are on the invoice.
      */
     public int getLineItemsCounter() {
         return this.LineItemsCounter;
     }
 
     /**
-     * Get invoice total
-     * @return invoice total, total price of all the invoice line items on the invoice.
+     * Get invoice total.
+     * @return Invoice total, total price of all the invoice line items on the invoice.
      */
     public double getInvoiceTotal(){
         double invoiceTotal = 0;
@@ -39,8 +39,8 @@ public class Invoice {
     }
 
     /**
-     * Add invoice line item
-     * @param invoiceItem item of type InvoiceItem to represent a line on the invoice
+     * Add invoice line item.
+     * @param invoiceItem Item of type InvoiceItem to represent a line on the invoice.
      */
     public void addInvoiceLineItem(InvoiceItem invoiceItem){
         this.invoiceLineItemsArray[this.LineItemsCounter] = invoiceItem;

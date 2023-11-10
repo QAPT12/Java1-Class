@@ -13,7 +13,7 @@ public class InvoiceItem {
     /**
      * Constructor for the invoice item. Takes a Product object and the quantity.
      * @param product item of type Product.
-     * @param quantity amount of that product to add to the invoice.
+     * @param quantity amount of that product to add to the invoice. Takes the greatest value between given and 0.
      */
     public InvoiceItem(Product product, int quantity) {
         this.product = product;
@@ -21,7 +21,7 @@ public class InvoiceItem {
     }
 
     /**
-     * Get product
+     * Get product.
      * @return the product object of the invoice line item.
      */
     public Product getProduct() {
@@ -29,7 +29,7 @@ public class InvoiceItem {
     }
 
     /**
-     * Set product
+     * Set product.
      * @param product item of type Product for the invoice line item.
      */
     public void setProduct(Product product) {
@@ -37,7 +37,7 @@ public class InvoiceItem {
     }
 
     /**
-     * Get quantity
+     * Get quantity.
      * @return quantity of the product being added to the invoice line item.
      */
     public int getQuantity() {
@@ -45,8 +45,8 @@ public class InvoiceItem {
     }
 
     /**
-     * Set quantity
-     * @param quantity quantity of the item being added to the invoice line item.
+     * Set quantity.
+     * @param quantity quantity of the item being added to the invoice line item. Must be greater than 0 or quantity is not changed.
      */
     public void setQuantity(int quantity) {
         if(quantity >= 0){
@@ -55,7 +55,7 @@ public class InvoiceItem {
     }
 
     /**
-     * Get item total
+     * Get item total.
      * @return total price for the invoice line item. Quantity * price of product.
      */
     public double getItemTotal() {

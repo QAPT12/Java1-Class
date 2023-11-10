@@ -1,6 +1,8 @@
 package ca.nl.cna.quintin.java1.InClassAssignments.Assign5;
 /**
- * tester for the classes of the simple invoice system for java assignment 5.
+ * Tester for the classes of the simple invoice system for java assignment 5.
+ * Builds some example products, Invoice Items, and an invoice and plays with the methods of each.
+ *
  *
  * @author quintin.tuck
  */
