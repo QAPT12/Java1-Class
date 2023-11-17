@@ -20,6 +20,8 @@ import java.util.Collections;
  */
 public class CardDeck {
 
+    public static final int handSize = 5;
+
     private ArrayList<PlayingCard> cardsArray = new ArrayList<>();
 
     /**
@@ -57,6 +59,20 @@ public class CardDeck {
         PlayingCard drawnCard = this.cardsArray.get(0);
         this.cardsArray.remove(0);
         return drawnCard;
+    }
+
+    /**
+     * Draw a hand of cards.
+     * @return ArrayList of Playing Cards representing a hand of 5 cards
+     */
+    public ArrayList<PlayingCard> drawHand(){
+        ArrayList<PlayingCard> handArray = new ArrayList<>();
+        for (int i = 0; i < handSize; i++) {
+            if(!this.cardsArray.isEmpty()) {
+                handArray.add(draw());
+            }
+        }
+        return handArray;
     }
 
 }
