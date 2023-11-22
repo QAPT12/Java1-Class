@@ -70,17 +70,21 @@ class PrimeNumberCalculatorTest {
      */
     @Test
     void primeFactorization() {
-        Random random = new Random();
-        int product = 1;
-        int checkNumber = random.nextInt();
-        ArrayList<Integer> factorList = new ArrayList<>();
+        final int NUM_OF_TESTS = 20;
+        for (int i = 0; i < NUM_OF_TESTS; i++) {
+            Random random = new Random();
+            int product = 1;
+            int checkNumber = random.nextInt();
+            ArrayList<Integer> factorList = new ArrayList<>();
 
-        factorList = PrimeNumberCalculator.getUniquePrimeFactorizationList(checkNumber, factorList);
+            factorList = PrimeNumberCalculator.getUniquePrimeFactorizationList(checkNumber, factorList);
 
-        for (Integer i: factorList) {
-            product = product * i;
+            for (Integer j : factorList) {
+                product = product * j;
+            }
+
+            assertEquals(product, checkNumber);
         }
-
-        assertEquals(product, checkNumber);
     }
+
 }
