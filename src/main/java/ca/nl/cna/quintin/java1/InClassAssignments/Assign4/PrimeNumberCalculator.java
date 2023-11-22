@@ -30,6 +30,8 @@
 
 package ca.nl.cna.quintin.java1.InClassAssignments.Assign4;
 
+import java.util.ArrayList;
+
 public class PrimeNumberCalculator {
 
     public static boolean isPrime(int n){
@@ -65,6 +67,37 @@ public class PrimeNumberCalculator {
             }
         }
         return factorizationString;
+    }
+
+    //The following are Josh's methods and I stole them (for JUnit Assign.
+    public static ArrayList<Integer> getUniquePrimeFactorizationList(int n, ArrayList<Integer> factorList){
+        int i = getLowestDenominator(n);
+        factorList.add(i);
+
+        if( n == i ){
+            return factorList;
+        }
+
+        return getUniquePrimeFactorizationList(n / i, factorList);
+    }
+
+    public static int getLowestDenominator(int n) {
+        if (n % 2 == 0) {
+            return 2;
+        } else if (n % 3 == 0) {
+            return 3;
+        }
+
+        //Check for primes before and after multiple so 6
+        for (int i = 5; i <= Math.sqrt(n); i += 6) {
+            if (n % (i) == 0) {
+                return i;
+            } else if (n % (i + 2) == 0) {
+                return i + 2;
+            }
+        }
+
+        return n;
     }
 
 
