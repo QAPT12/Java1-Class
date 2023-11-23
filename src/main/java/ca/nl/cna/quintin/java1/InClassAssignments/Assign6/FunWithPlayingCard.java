@@ -31,10 +31,10 @@ public class FunWithPlayingCard {
             } else if (c == 'C') {
                 System.out.println(deck.drawHand());
             } else if (c == 'D') {
-                System.out.println(deck.getCardsArray());
+                System.out.println(deck.printDeck());
             }
 
-            if(deck.getCardsArray().isEmpty()){
+            if(deck.getDeckSize() == 0){
                 deck = new CardDeck();
             }
 

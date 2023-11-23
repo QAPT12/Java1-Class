@@ -3,18 +3,6 @@ package ca.nl.cna.quintin.java1.InClassAssignments.Assign6;
 /**
  * Class representing a playing card.
  *
- * <pre>
- * Create a class called ‘PlayingCard’ that does the following:
- *      • Has a constructor which creates the card - it should have a valid suit and a value.
- *      • You should have getters only for these values.
- *      • Note: use constants for suits and think of how you can constrain the value. Hint: You can
- *          use constants or enums.
- *      • Override the toString method to print the playing card like “8 ♣” or “K ♦” (static). (Hint:
- *          google ‘unicode character for diamond’)
- *      • Bonus: Print an ASCII Art version of the Card to the a print screen like the following:
- *          printAsciiCard(PlayingCard playingCard, PrintStream printStream)
- * </pre>
- *
  * @author quintin.tuck
  */
 
@@ -53,7 +41,7 @@ public class PlayingCard {
 
     /**
      * Get value.
-     * @return value, the value of the card from 1-13. (1 = Ace, 11 = Jack, 12 = Queen, 13 = King)
+     * @return value, the value of the card
      */
     public int getValue() {
         return value;

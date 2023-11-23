@@ -69,7 +69,7 @@ public class PrimeNumberCalculator {
         return factorizationString;
     }
 
-    //The following are Josh's methods and I stole them (for JUnit Assign.
+    //The following are Josh's methods and I stole them for JUnit Assign.
     public static ArrayList<Integer> getUniquePrimeFactorizationList(int n, ArrayList<Integer> factorList){
         int i = getLowestDenominator(n);
         factorList.add(i);

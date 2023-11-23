@@ -6,28 +6,19 @@ import java.util.Collections;
 /**
  * Class to represent a deck of playing cards.
  *
- * <pre>
- * Create a class called ‘CardDeck’ that has the following methods:
- *      • Has an ArrayList of Playing cards
- *      • Starts with a full deck of cards
- *      • Can be shuffled
- *      • Can draw a card
- *      • Create an application with a menu that let’s you a) draw a card b) draw a hand c) print the
- *          deck, d) shuffle the deck and e) print out the deck
- * </pre>
- *
  * @author quintin.tuck
  */
 public class CardDeck {
 
     public static final int handSize = 5;
 
-    private ArrayList<PlayingCard> cardsArray = new ArrayList<>();
+    private ArrayList<PlayingCard> cardsArray;
 
     /**
      * Constructor for the deck of cards. Loops through values 1 - 13 and adds a card for each suit to the array list.
      */
     public CardDeck() {
+        cardsArray = new ArrayList<>();
         for (int i = 1; i <= 13 ; i++) {
             this.cardsArray.add(new PlayingCard(i, PlayingCard.Suit.DIAMONDS));
             this.cardsArray.add(new PlayingCard(i, PlayingCard.Suit.HEARTS));
@@ -37,11 +28,23 @@ public class CardDeck {
     }
 
     /**
-     * Get cardsArray.
-     * @return the list of playing cards representing the deck of cards
+     * printDeck. Method print out the contents of the deck.
+     * @return Cards of the deck printed out in order.
      */
-    public ArrayList<PlayingCard> getCardsArray() {
-        return cardsArray;
+    public StringBuilder printDeck() {
+        StringBuilder returnString = new StringBuilder();
+        for (PlayingCard s: this.cardsArray) {
+            returnString.append(s).append(" ");
+        }
+        return returnString;
+    }
+
+    /**
+     * getDeckSize.
+     * @return Amount of cards left in the deck.
+     */
+    public int getDeckSize() {
+        return this.cardsArray.size();
     }
 
     /**

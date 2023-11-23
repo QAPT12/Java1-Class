@@ -37,7 +37,7 @@ class PrimeNumberCalculatorTest {
     }
 
     /**
-     * uniquePrimeFactorization. Test a known number and its known unique prime factors to verify the method is working properly.
+     * uniquePrimeFactorization. Test a number and its known unique prime factors to verify the method is working properly.
      */
     @Test
     void uniquePrimeFactorization() {
@@ -45,7 +45,7 @@ class PrimeNumberCalculatorTest {
     }
 
     /**
-     * uniquePrimeFactorizationList. Test known number and its known unique prime factors to verify the method is working correctly
+     * uniquePrimeFactorizationList. Test number and its known unique prime factors to verify the method is working correctly
      * and returns an ArrayList containing the unique prime factors.
      */
     @Test
