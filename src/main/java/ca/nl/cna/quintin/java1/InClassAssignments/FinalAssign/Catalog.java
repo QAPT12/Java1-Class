@@ -58,7 +58,6 @@ public class Catalog {
         productsArrayList.add(new Service(Service.Services.ASSEMBLE));
         productsArrayList.add(new Service(Service.Services.DEFRAG));
         productsArrayList.add(new Service(Service.Services.REPAIR));
-
     }
 
 }
