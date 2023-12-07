@@ -6,9 +6,23 @@ package ca.nl.cna.quintin.java1.InClassAssignments.FinalAssign;
  * @author quintin.tuck
  */
 public abstract class Billable {
-    private double price;
-    private String id;
-    private String description;
+    private final double price;
+    private final String id;
+    private final String description;
+
+
+    /**
+     * Constructor for a Billable item.
+     *
+     * @param id String to use as an identifier for the item.
+     * @param description short description explaining what the item is.
+     * @param price price of the item.
+     */
+    public Billable(String id, String description, double price) {
+        this.price = price;
+        this.id = id;
+        this.description = description;
+    }
 
     /**
      * getPrice.
@@ -16,16 +30,6 @@ public abstract class Billable {
      */
     public double getPrice() {
         return price;
-    }
-
-    /**
-     * setPrice.
-     * @param price new price for the item. Must be above 0 or price is not changed.
-     */
-    public void setPrice(double price) {
-        if(price > 0 ) {
-            this.price = price;
-        }
     }
 
     /**
@@ -37,11 +41,11 @@ public abstract class Billable {
     }
 
     /**
-     * setId.
-     * @param id new ID for the billable item.
+     * getDescription.
+     * @return description for the billable
      */
-    public void setId(String id) {
-        this.id = id;
+    public String getDescription() {
+        return description;
     }
 
 }
