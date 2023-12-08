@@ -10,17 +10,20 @@ import java.util.ArrayList;
  */
 public class Invoice {
 
-    private ArrayList<InvoiceLineItem> InvoiceLineItemArrayList;
+    private ArrayList<InvoiceLineItem> invoiceLineItemArrayList;
     private final Customer customer;
     private LocalDate dueDate;
+    private final String invoiceNumber;
 
     /**
      * Constructor for an invoice. Takes in a customer and due date for the invoice.
      * @param customer Customer on the invoice.
-     * @param dueDate Due date of the payment fr the invoice.
+     * @param invoiceNumber Invoice number for the invoice.
      */
-    public Invoice(Customer customer, LocalDate dueDate) {
+    public Invoice(Customer customer, String invoiceNumber) {
         this.customer = customer;
+        this.invoiceNumber = invoiceNumber;
+        this.invoiceLineItemArrayList = new ArrayList<InvoiceLineItem>();
     }
 
     /**
@@ -28,7 +31,7 @@ public class Invoice {
      * @return The array list containing all the line items on the invoice.
      */
     public ArrayList<InvoiceLineItem> getInvoiceLineItemArrayList() {
-        return InvoiceLineItemArrayList;
+        return invoiceLineItemArrayList;
     }
 
     /**
@@ -48,6 +51,14 @@ public class Invoice {
     }
 
     /**
+     * getInvoiceNumber. Returns the identifying invoice number for the invoice.
+     * @return invoice Number
+     */
+    public String getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    /**
      * calculateDueDate. Calculate and set the due date of the invoice based on ethe payment terms.
      */
     public void calculateDueDate(int paymentTerms) {
@@ -60,7 +71,7 @@ public class Invoice {
      */
     public double calculateSubTotal(){
         double total = 0.0;
-        for (InvoiceLineItem invoiceLineItem: this.InvoiceLineItemArrayList) {
+        for (InvoiceLineItem invoiceLineItem: this.invoiceLineItemArrayList) {
             total += invoiceLineItem.calculatePrice();
         }
         return total;
@@ -87,7 +98,7 @@ public class Invoice {
      * @param invoiceLineItem The invoice line item to add to the invoice
      */
     public void addInvoiceLineItem(InvoiceLineItem invoiceLineItem) {
-        this.InvoiceLineItemArrayList.add(invoiceLineItem);
+        this.invoiceLineItemArrayList.add(invoiceLineItem);
     }
 
 }

@@ -1,6 +1,8 @@
 package ca.nl.cna.quintin.java1.InClassAssignments.FinalAssign;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Simple class to use as a catalog for the invoice system.
@@ -9,19 +11,26 @@ import java.util.ArrayList;
  */
 public class Catalog {
 
-    ArrayList<Billable> productsArrayList;
+    private ArrayList<Billable> productsArrayList;
 
-    public Catalog(ArrayList<Billable> productsArrayList) {
-        this.productsArrayList = productsArrayList;
+
+    /**
+     * Constructor for catalog. Fills the array list with products form the preset options.
+     */
+    public Catalog() {
+        this.productsArrayList = new ArrayList<Billable>();
         this.buildProductsList();
     }
 
     /**
-     * gertProductArrayList.
-     * @return The array of Products in the catalog.
+     * printCatalog. Prints the catalog out to the screen.
      */
-    public ArrayList<Billable> getProductsArrayList() {
-        return productsArrayList;
+    public void printCatalog(PrintStream printStream){
+        printStream.println("========================== CATALOG ==========================");
+        printStream.printf("%-10s %-40s %-10s", "ID", "DESCRIPTION", "PRICE($)");
+        for (Billable item: this.productsArrayList) {
+            printStream.printf("\n%-10s %-40s   %-10.2f", item.getId(), item.getDescription(), item.getPrice());
+        }
     }
 
     /**
@@ -31,7 +40,7 @@ public class Catalog {
      */
     public Billable getProduct(String id){
         for (Billable item: productsArrayList) {
-            if(item.getId() == id){
+            if(Objects.equals(item.getId(), id)){
                 return item;
             }
         }

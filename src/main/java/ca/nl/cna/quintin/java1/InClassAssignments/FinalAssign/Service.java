@@ -19,9 +19,9 @@ public class Service extends Billable {
      * Enum to store all the services being offered. Gets around not using DB or files.
      */
     public enum Services{
-        ASSEMBLE("Assemble", "Computer Assembly", 125.00),
-        REPAIR("Repair", "General Repair (hour)", 27.50),
-        DEFRAG("Defrag", "Defragment Hard Drive", 25.00);
+        ASSEMBLE("ASSEMBLE", "Computer Assembly", 125.00),
+        REPAIR("REPAIR", "General Repair (hour)", 27.50),
+        DEFRAG("DEFRAG", "Defragment Hard Drive", 25.00);
 
         private final String id;
         private final String description;

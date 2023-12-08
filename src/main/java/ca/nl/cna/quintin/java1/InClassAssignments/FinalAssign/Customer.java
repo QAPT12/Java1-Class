@@ -17,7 +17,7 @@ public class Customer {
      * @param firstName first name of the customer.
      * @param lastName last name of the customer.
      * @param email email address for the customer.
-     * @param address address object sotring the customers address information.
+     * @param address address object storing the customers address information.
      */
     public Customer(String firstName, String lastName, String email, Address address) {
         this.firstName = firstName;
