@@ -40,7 +40,7 @@ class CustomerTest {
     void getEmail() {
         String email = "joshtaylor@ed.cna.nl.ca";
         Customer customer = new Customer("josh", "taylor", email, testAddress);
-        assertEquals(customer.getLastName(), email);
+        assertEquals(customer.getEmail(), email);
     }
 
     /**

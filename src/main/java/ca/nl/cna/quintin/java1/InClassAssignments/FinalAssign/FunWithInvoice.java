@@ -117,7 +117,7 @@ public class FunWithInvoice {
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("CP001"), 1));
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("MB002"), 1));
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("HD003"), 1));
-        invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("RM004"), 1));
+        invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("RM004"), 2));
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("VC005"), 1));
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("PS007"), 1));
         invoice.addInvoiceLineItem(new InvoiceLineItem(catalog.getProduct("FN013"), 1));

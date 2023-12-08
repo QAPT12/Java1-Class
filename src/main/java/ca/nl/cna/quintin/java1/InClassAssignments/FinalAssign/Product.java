@@ -9,7 +9,6 @@ public class Product extends Billable{
 
     /**
      * Constructor for a Product.
-     *
      * @param id String to use as an identifier for the product.
      * @param description short description explaining what the product is.
      * @param price price of the product.

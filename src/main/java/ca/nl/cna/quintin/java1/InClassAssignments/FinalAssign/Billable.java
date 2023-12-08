@@ -13,7 +13,6 @@ public abstract class Billable {
 
     /**
      * Constructor for a Billable item.
-     *
      * @param id String to use as an identifier for the item.
      * @param description short description explaining what the item is.
      * @param price price of the item.
